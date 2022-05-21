@@ -1,15 +1,13 @@
 - url: https://mp.weixin.qq.com/s/H6DKLgrj0NBTCS9U7jIZ-g
-      output: shot.png
-#  height: 800
-    - name: Cache Playwright browsers
-      uses: actions/cache@v2
-      with:
-        path: ~/.cache/ms-playwright/
-        key: ${{ runner.os }}-browsers
-    - name: Install extra fonts
-      run: |
-        sudo apt-get install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-
+  output: shot.png
+  - name: Cache Playwright browsers
+    uses: actions/cache@v2
+    with:
+      path: ~/.cache/ms-playwright/
+      key: ${{ runner.os }}-browsers
+  - name: Install extra fonts
+    run: |
+      sudo apt-get install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
+  - name: Install dependencies
+    run: |
+      pip install -r requirements.txt
